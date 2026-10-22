@@ -1,0 +1,13 @@
+{
+  "name": "Findit — Stay, ride & travel",
+  "short_name": "Findit",
+  "description": "Find PG rooms, book taxis, and reserve hotels in one place.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f4ee",
+  "theme_color": "#25362a",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
+
