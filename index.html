@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#25362a" />
+  <meta name="description" content="Findit helps you find PG rooms, book taxis, and reserve hotels." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <title>Findit — Find your everyday stay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav shell">
+    <a class="brand" href="#"><span class="brand-mark">f</span> findit</a>
+    <div class="nav-links"><a href="#explore">Explore</a><a href="#bookings">My bookings</a><a href="admin.html">Admin</a><a href="#support">Help</a></div>
+    <button class="profile" aria-label="Open profile">ST</button>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy shell">
+        <p class="eyebrow">One app. Every journey.</p>
+        <h1>Find your place.<br><em>Then go places.</em></h1>
+        <p class="hero-text">Rooms that feel like home, rides that arrive on time, and stays worth looking forward to.</p>
+      </div>
+      <div class="glow glow-one"></div><div class="glow glow-two"></div>
+    </section>
+
+    <section class="search-wrap shell" id="explore">
+      <div class="service-tabs" role="tablist">
+        <button class="tab active" data-service="pg"><span class="tab-icon">⌂</span> PG rooms</button>
+        <button class="tab" data-service="taxi"><span class="tab-icon">⌁</span> Taxi</button>
+        <button class="tab" data-service="hotel"><span class="tab-icon">✦</span> Hotels</button>
+      </div>
+      <form class="search-panel" id="searchForm">
+        <div class="field"><label id="placeLabel">Where do you want to live?</label><input id="location" placeholder="Search a neighbourhood or city" value="Bengaluru" /></div>
+        <div class="field"><label id="dateLabel">Move-in date</label><input id="date" type="date" /></div>
+        <div class="field guests-field"><label id="guestLabel">Guests</label><select id="guests"><option>1 guest</option><option>2 guests</option><option>3 guests</option><option>4 guests</option></select></div>
+        <button class="search-btn" type="submit">Search <span>→</span></button>
+      </form>
+    </section>
+
+    <section class="shell quick-section">
+      <div class="section-heading"><div><p class="eyebrow">Made for your next move</p><h2>What are you looking for?</h2></div><button class="arrow-control" aria-label="next">→</button></div>
+      <div class="quick-grid">
+        <article class="quick-card pg-card"><div class="card-art"><span class="window w1"></span><span class="window w2"></span><span class="plant">♣</span></div><div><p>From ₹6,500 / month</p><h3>Find a PG room</h3><a href="#" class="card-link" data-pick="PG rooms">Browse rooms <span>→</span></a></div></article>
+        <article class="quick-card taxi-card"><div class="card-art"><span class="road"></span><span class="car">▰</span><span class="cloud">☁</span></div><div><p>Rides in minutes</p><h3>Book a taxi</h3><a href="#" class="card-link" data-pick="Taxi">Find a ride <span>→</span></a></div></article>
+        <article class="quick-card hotel-card"><div class="card-art"><span class="sun">☼</span><span class="hotel-building">▥</span><span class="palm">♠</span></div><div><p>From ₹1,299 / night</p><h3>Escape for a while</h3><a href="#" class="card-link" data-pick="Hotels">Explore hotels <span>→</span></a></div></article>
+      </div>
+    </section>
+
+    <section class="shell stays-section" id="bookings">
+      <div class="section-heading"><div><p class="eyebrow">Popular near Bengaluru</p><h2>Places people love</h2></div><a href="#" class="view-all">View all <span>→</span></a></div>
+      <div class="listing-grid" id="listingGrid">
+        <article class="listing"><div class="photo photo-one"><span class="tag">Guest favourite</span><button class="heart">♡</button></div><div class="listing-info"><div><h3>Olive House Residency</h3><p>Koramangala · 1.8 km away</p></div><strong>₹9,800<small>/mo</small></strong><div class="rating">★ 4.8 <span>(124 reviews)</span></div></div></article>
+        <article class="listing"><div class="photo photo-two"><span class="tag">New</span><button class="heart">♡</button></div><div class="listing-info"><div><h3>The Nest Co-living</h3><p>HSR Layout · 3.2 km away</p></div><strong>₹11,200<small>/mo</small></strong><div class="rating">★ 4.7 <span>(89 reviews)</span></div></div></article>
+        <article class="listing"><div class="photo photo-three"><button class="heart">♡</button></div><div class="listing-info"><div><h3>Bloom Living Spaces</h3><p>Indiranagar · 4.7 km away</p></div><strong>₹12,500<small>/mo</small></strong><div class="rating">★ 4.9 <span>(211 reviews)</span></div></div></article>
+      </div>
+    </section>
+
+    <section class="app-banner shell">
+      <div class="app-text"><p class="eyebrow">The Findit app</p><h2>Everything you need,<br>right in your pocket.</h2><p>Manage bookings, get instant ride updates and unlock member-only prices.</p><div class="store-row"><button> <span>Download on the<br><b>App Store</b></span></button><button>▶ <span>GET IT ON<br><b>Google Play</b></span></button></div></div>
+      <div class="phone"><div class="notch"></div><div class="phone-screen"><div class="mini-brand">f findit</div><p>Good morning, Sumit</p><div class="mini-map"><span>✦</span><i></i><b></b></div><h4>Your next stay</h4><div class="mini-booking"><span>⌂</span><div><b>Olive House</b><small>Check-in · 12 Nov</small></div><em>→</em></div></div></div>
+    </section>
+  </main>
+  <footer class="shell"><a class="brand" href="#"><span class="brand-mark">f</span> findit</a><p>© 2026 Findit India. Made for the way you move.</p><div><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">X / Twitter</a></div></footer>
+  <div class="toast" id="toast">Searching for the best stays around Bengaluru…</div>
+  <script src="app.js"></script>
+</body>
+</html>
+
