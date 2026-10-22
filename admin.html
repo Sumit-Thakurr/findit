@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#25362a" />
+  <title>Findit — Administrator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <nav class="nav shell"><a class="brand" href="index.html"><span class="brand-mark">f</span> findit</a><div class="admin-nav-label">Administrator workspace</div><a class="back-link" href="index.html">← View app</a></nav>
+  <main class="admin shell">
+    <div class="admin-intro"><div><p class="eyebrow">Content management</p><h1>Keep Findit<br><em>up to date.</em></h1><p>Upload your latest rooms, hotels, and taxi listings. Visitors see the updated collection instantly on this device.</p></div><div class="admin-stat"><b id="listingCount">0</b><span>active listings</span></div></div>
+    <section class="upload-card">
+      <div class="upload-icon">↑</div><h2>Upload listing data</h2><p>Drop a <b>CSV</b> or <b>JSON</b> file here, or select one from your computer.</p>
+      <input type="file" id="dataFile" accept=".csv,.json,application/json,text/csv" hidden />
+      <button id="chooseFile" class="primary-action">Choose file</button>
+      <p class="file-status" id="fileStatus">No file selected</p>
+    </section>
+    <section class="admin-grid">
+      <div class="format-card"><p class="eyebrow">Required fields</p><h2>Simple data format</h2><p>Use these column headings in a CSV file, or the same keys in a JSON array.</p><code>name, location, type, price, rating, reviews</code><p class="fine-print">Type can be PG, Hotel, or Taxi. Only name is required; all other fields are optional.</p><button class="text-button" id="downloadTemplate">Download CSV template ↓</button></div>
+      <div class="data-card"><div class="data-card-head"><div><p class="eyebrow">Current data</p><h2>Your listings</h2></div><button class="danger-button" id="clearData">Clear all</button></div><div id="dataPreview" class="data-preview"><p class="empty-state">No uploaded listings yet.</p></div></div>
+    </section>
+  </main>
+  <div class="toast" id="toast"></div><script src="admin.js"></script>
+</body>
+</html>
+
